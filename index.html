@@ -478,6 +478,7 @@
   var CLOUDINARY_CLOUD_NAME = 'qkaqjw3k';
   var CLOUDINARY_UPLOAD_PRESET = 'nisan-davetiye';
   var CLOUDINARY_TAG = 'gulseren-bunyamin-nisan';
+  var CLOUDINARY_FOLDER = 'nisan-davetiye-fotograflari';
 
   var memoriesLocked = document.getElementById('memoriesLocked');
   var memoriesUnlocked = document.getElementById('memoriesUnlocked');
@@ -522,6 +523,7 @@
         formData.append('file', file);
         formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
         formData.append('tags', CLOUDINARY_TAG);
+        formData.append('folder', CLOUDINARY_FOLDER);
         fetch('https://api.cloudinary.com/v1_1/' + CLOUDINARY_CLOUD_NAME + '/image/upload', {
           method: 'POST',
           body: formData
